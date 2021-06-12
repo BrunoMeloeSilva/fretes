@@ -1,3 +1,12 @@
 micronaut:
   application:
     name: fretes
+
+endpoints:
+  all:
+    port: 80 # Default port
+    sensitive: true # Todos os endpoints esperam autenticacao
+  health:
+    enabled: true # Por padrao é true
+    sensitive: false # SE Acessivel para usuarios ANONIMOS = false, SE true, somente usuários autenticados
+    details-visible: ANONYMOUS # ANONYMOUS: Show health details to all users; AUTHENTICATED: Only show health details to authenticated users; NEVER: Never show health details.
